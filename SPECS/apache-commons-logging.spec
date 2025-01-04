@@ -2,7 +2,7 @@
 
 Name:           apache-commons-logging
 Version:        1.2
-Release:        29%{?dist}
+Release:        31%{?dist}
 Summary:        Apache Commons Logging
 License:        ASL 2.0
 URL:            http://commons.apache.org/logging
@@ -82,6 +82,12 @@ rm -rf src/test/java/org/apache/commons/logging/log4j/log4j12
 %doc PROPOSAL.html RELEASE-NOTES.txt
 
 %changelog
+* Tue Nov 19 2024 Marián Konček <mkoncek@redhat.com> - 1.2-31
+- Rebuild with regenerated Requires on Java
+
+* Mon Nov 18 2024 Marián Konček <mkoncek@redhat.com> - 1.2-30
+- Rebuild with regenerated Requires on Java
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 1.2-29
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
