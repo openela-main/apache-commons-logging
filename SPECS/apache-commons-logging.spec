@@ -2,11 +2,12 @@
 
 Name:           apache-commons-logging
 Version:        1.2
-Release:        31%{?dist}
+Release:        33%{?dist}
 Summary:        Apache Commons Logging
 License:        ASL 2.0
 URL:            http://commons.apache.org/logging
 BuildArch:      noarch
+ExclusiveArch:  aarch64 ppc64le s390x x86_64 noarch
 
 Source0:        http://www.apache.org/dist/commons/logging/source/commons-logging-%{version}-src.tar.gz
 Source2:        http://mirrors.ibiblio.org/pub/mirrors/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.pom
@@ -82,6 +83,12 @@ rm -rf src/test/java/org/apache/commons/logging/log4j/log4j12
 %doc PROPOSAL.html RELEASE-NOTES.txt
 
 %changelog
+* Sat Nov 23 2024 Marián Konček <mkoncek@redhat.com> - 1.2-33
+- Add noarch to ExclusiveArch
+
+* Fri Nov 22 2024 Marián Konček <mkoncek@redhat.com> - 1.2-32
+- Disable building on i686
+
 * Tue Nov 19 2024 Marián Konček <mkoncek@redhat.com> - 1.2-31
 - Rebuild with regenerated Requires on Java
 
